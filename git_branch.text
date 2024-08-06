@@ -3,3 +3,4 @@ develop = 最終確認用
 install = プラグインなどのインストール用
 mvc = モデル・ビュー・コントローラ作成
 common-home = 共通テンプレ＆homes.top&about作成
+user = ユーザー一覧・詳細・編集ページ作成
