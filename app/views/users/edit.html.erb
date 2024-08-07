@@ -1,1 +1,31 @@
-<h1>users#edit</h1>
+<div class='container'>
+  <header class="mx-auto text-center bg-dark text-white">
+    <h1>ユーザー編集</h1>
+  </header>
+
+  <div class='row'>
+    <div class="col-sm-12 col-md-8 col-lg-5 px-5 px-sm-0 mx-auto">
+      <%= form_with model: @user do |f| %>
+        <div>
+          <label>プロフィール画像</label><br />
+          <%= f.file_field :profile_image, accept: "image/*" %>
+        </div>
+        <div>
+          <label for="inputName">名前</label><br />
+          <%= f.text_field :name, autofocus: true, id:"inputName"%>
+        </div>
+        <div>
+          <label for="inputPreference">好物</label><br />
+          <%= f.text_area :preference, id:"inputPreference"%>
+        </div>
+        <div>
+          <label for="inputWeak">苦手</label><br />
+          <%= f.text_area :weak, id:"inputWeak"%>
+        </div>
+        <div>
+          <%= f.submit "更新" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
