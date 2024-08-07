@@ -1,10 +1,14 @@
-<div class='container'>
+<div class='container px-5 px-sm-0'>
   <header class="mx-auto text-center bg-dark text-white">
-    <h1>ネタ編集</h1>
+    <h1>ネタ出し</h1>
   </header>
 
   <div class='row'>
-    <div class="col-sm-12 col-md-11 col-lg-10 px-5 px-sm-0 mx-auto">
+    <div class='col-md-3'>
+      <h2>User info</h2>
+      <h2>ヘッダーメニュー</h2>
+    </div>
+    <div class='col-md-8 offset-md-1'>
       <%= form_with model: @idea do |f| %>
         <div>
           <label for="inputCategory">ジャンルやCP</label><br />
@@ -19,15 +23,9 @@
           <%= f.text_area :body, id:"inputBody", style: "width: 100%;" %>
         </div>
         <div>
-          <%= f.submit "更新" %>
+          <%= f.submit 'メモ' %>
         </div>
       <% end %>
-    </div>
-  </div>
-  <div class='row'>
-    <div class="col-sm-12 col-md-11 col-lg-10 px-5 px-sm-0 mx-auto">
-      <p>本のタイトル</p>
-      <p>本文</p>
     </div>
   </div>
 </div>
