@@ -4,19 +4,19 @@
   </header>
 
   <div class='row'>
-    <div class="col-sm-12 col-md-8 col-lg-5 px-5 px-sm-0 mx-auto">
+    <div class="col-sm-12 col-md-11 col-lg-10 px-5 px-sm-0 mx-auto">
       <%= form_with model: @idea do |f| %>
         <div>
           <label for="inputCategory">ジャンルやCP</label><br />
-          <%= f.text_field :category, autofocus: true, id:"inputCategory" %>
+          <%= f.text_field :category, autofocus: true, id:"inputCategory", style: "width: 100%;" %>
         </div>
         <div>
           <label for="inputTag">タグ・キーワード</label><br />
-          <%= f.text_area :tag, id:"inputTag" %>
+          <%= f.text_area :tag, id:"inputTag", style: "width: 100%;" %>
         </div>
         <div>
           <label for="inputBody">ネタ</label><br />
-          <%= f.text_area :body, id:"inputBody" %>
+          <%= f.text_area :body, id:"inputBody", style: "width: 100%;" %>
         </div>
         <div>
           <%= f.submit "更新" %>
@@ -25,7 +25,7 @@
     </div>
   </div>
   <div class='row'>
-    <div class="col-sm-12 col-md-8 col-lg-5 px-5 px-sm-0 mx-auto">
+    <div class="col-sm-12 col-md-11 col-lg-10 px-5 px-sm-0 mx-auto">
       <p>本のタイトル</p>
       <p>本文</p>
     </div>
