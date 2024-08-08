@@ -4,7 +4,14 @@
   </header>
 
   <div class='row'>
-    <div class="col-sm-12 col-md-11 col-lg-10 px-5 px-sm-0 mx-auto">
+    <div class='col-md-3'>
+      <div>
+        <h2>User info</h2>
+        <%= render 'users/info', user: current_user %>
+      </div>
+      <div><%= render 'layouts/menu' %></div>
+    </div>
+    <div class='col-md-8 offset-md-1'>
       <%= form_with model: @idea do |f| %>
         <div>
           <label for="inputCategory">ジャンルやCP</label><br />
@@ -22,12 +29,10 @@
           <%= f.submit "更新" %>
         </div>
       <% end %>
-    </div>
-  </div>
-  <div class='row'>
-    <div class="col-sm-12 col-md-11 col-lg-10 px-5 px-sm-0 mx-auto">
-      <p>本のタイトル</p>
-      <p>本文</p>
+      <div>
+        <p>本のタイトル</p>
+        <p>本文</p>
+      </div>
     </div>
   </div>
 </div>

@@ -1,0 +1,12 @@
+<% if user_signed_in? %> <!--ログイン状態なら-->
+  <p><%= link_to "About", homes_about_path %></p>
+  <p><%= link_to "マイページ", user_path(current_user.id) %></p>
+  <p><%= link_to "ネタ出し", new_idea_path %></p>
+  <p><%= link_to "仲間たち", users_path %></p>
+  <p><%= link_to "ログアウト",destroy_user_session_path, method: :delete %></p>
+<% else %> <!--ログアウト状態なら-->
+  <p><%= link_to "Home", root_path %></p>
+  <p><%= link_to "About", homes_about_path %></p>
+  <p><%= link_to "新規ユーザー登録", new_user_registration_path %></p>
+  <p><%= link_to "ログイン", new_user_session_path %></p>
+<% end %>

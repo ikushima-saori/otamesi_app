@@ -11,41 +11,11 @@
   </head>
 
   <body>
-    <header>
-      <% if user_signed_in? %> <!--ログイン状態なら-->
-        <span>
-          <%= link_to "わたネタ", root_path %>
-        </span>
-        <span>
-          <%= link_to "Home", root_path %>
-        </span>
-        <span>
-          <%= link_to "仲間たち", users_path %>
-        </span>
-        <span>
-          <%= link_to "ネタ出し", new_idea_path %>
-        </span>
-        <span>
-          <%= link_to "Log out",destroy_user_session_path, method: :delete %>
-        </span>
-      <% else %> <!--ログアウト状態なら-->
-        <span>
-          <%= link_to "わたネタ", root_path %>
-        </span>
-        <span>
-          <%= link_to "Home", root_path %>
-        </span>
-        <span>
-          <%= link_to "About", homes_about_path %>
-        </span>
-        <span>
-          <%= link_to "Sign up", new_user_registration_path %>
-        </span>
-        <span>
-          <%= link_to "Log in", new_user_session_path %>
-        </span>
-      <% end %>
-    </header>
-    <%= yield %>
+    <main>
+      <%= yield %>
+    </main>
+    <footer class="mx-auto text-center bg-dark text-white">
+      footer後で考える
+    </footer>
   </body>
 </html>
